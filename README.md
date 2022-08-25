@@ -5,6 +5,7 @@ The THOMAS workflow is shown below:-
 ![THOMAS workflow](THOMAS.jpg "Workflow")
 
 ## Installation instructions
+- **Update Aug 25 2022** You can directly download the container from dockerhub ```docker pull anagrammarian/thomas``` if you do not want to build it from the Dockerfile. 
 - Download the files using ```git clone https://github.com/thalamicseg/thomasdocker.git``` which will create a **thomasdocker** directory
 
 - Make sure docker is installed already on your machine or install it from here https://docs.docker.com/get-docker/.  
