@@ -5,7 +5,7 @@ The THOMAS workflow is shown below:-
 ![THOMAS workflow](THOMAS.jpg "Workflow")
 
 ## Installation instructions
-- **Update Aug 25 2022** You can directly download the container from dockerhub ```docker pull anagrammarian/thomas``` if you do not want to build it from the Dockerfile. 
+- **Update Aug 25 2022-** You can directly download the container from dockerhub ```docker pull anagrammarian/thomas``` if you do not want to build it from the Dockerfile. If you do that, you can skip the rest and proceed to Docker usage. Note that if you pull from hub, you need to replace the container name thomas with anagrammarian/thomas in the usage instructions below.
 - Download the files using ```git clone https://github.com/thalamicseg/thomasdocker.git``` which will create a **thomasdocker** directory
 
 - Make sure docker is installed already on your machine or install it from here https://docs.docker.com/get-docker/.  
@@ -25,7 +25,7 @@ The THOMAS workflow is shown below:-
     - thomas_csh_big is also for WMn MPRAGE/FGATIR data but used for older patients with enlarged ventricles (larger crop)
 - Note: If you are running on a Linux host, output will be owned by root unless you add ```--user $(id -u):$(id -g) ``` to your docker commands to preserve the ownership. This, in some machines, will generate a bizarre prompt due to usernames missing but after it finishes, it will retain your ownership of the files THOMAS creates.
 - Advanced users can also launch just the container using ```docker run -v <yourdatadir>:<yourdatadir> -w <yourdatadir>  --rm -it thomas ``` and then run the thomas_csh or thomas_csh_mv on the desired files inside the container. This allows some flexibility in manipulating things inside the container.
-- **Updated Jun 1 2022** Two wrapper bash scripts thomas and thomast1 are now available which does everything including the ownership stuff (see usage below). You should put them in ~/bin (and add ~/bin to your path to easily access it from anywhere or call ~/bin/thomas or ~/bin/thomast1)
+- **Update Jun 1 2022-** Two wrapper bash scripts thomas and thomast1 are now available which does everything including the ownership stuff (see usage below). You should put them in ~/bin (and add ~/bin to your path to easily access it from anywhere or call ~/bin/thomas or ~/bin/thomast1)
 
 ## Running the provided test data 
 -  First extract the test data by running ```tar -xvzf example.tgz``` inside the **thomasdocker** directory
