@@ -124,7 +124,11 @@ RUN \
     apt-get install -y sudo curl git && \
     curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | sudo bash && \
     sudo apt-get install git-lfs 
-RUN cd /opt && git lfs clone https://github.com/thalamicseg/thomas_new.git 
+RUN cd /opt && git lfs clone https://github.com/cnicolasgr/thomas_new.git 
+# AMP
+# Change to branche with the code for thomas with mask
+RUN cd /thomas_new && git checkout -b thomas_with_mask origin/thomas_with_mask
+# PMA
 
 ADD ./jointfusion.tgz /opt/PICSL-MALF
 ADD ./example.tgz /opt/testcase
